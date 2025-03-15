@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Countries</title>
+	<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body >
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="php/continents.php">Continents</a>
+  <a href="php/countries.php">Countries</a>
+  <a href="php/stories.php">Stories country</a>
+  <a href="php/edit_countries.php">Edit Countries</a>
+  <a href="php/input_stories.php">Input Stories</a>
+  <a href="php/resources.php">Resources</a>
+  <input type="text" id="searchInput" placeholder="Search the database.." onkeydown="handleSearch(event)">
+</div>
+<div class="bg">
+<h2 class="header_center">
+The Fascinating World of Countries:
+</h2>
+<h2 class="header_center">
+Your Guide to Planet Earth
+</h2>
+<div style="padding-right: 55px;">
+<p class="tabb">
+Dear travelers, explorers and curious souls!
+Welcome to our unique website, where each page is a window into the exciting world of diversity, culture and amazing stories from all corners of our planet.
+</p>
+<p class="tabb">
+Traveling is not only a way to see the world, but also an opportunity to better understand yourself and others. It teaches us tolerance, openness and respect for the differences between people and cultures.
+</p>
+
+
+<img src="img/table.jpg" title="images" style="width: 25%;" onclick="openModal(this)">
+<h2 class="tabb">
+What awaits you:
+</h2>
+<ul style="padding-left: 55px;">
+     <li>🌍 Detailed information about 195 countries of the world</li>
+     <li>🏞️ Unique facts and statistics</li>
+     <li>🌈 The richest cultural mosaic</li>
+     <li>📍 Introduce you to the unknown</li>
+     <li>🌐 Up-to-date information on geography, population, traditions</li>
+</ul>
+</div>
+
+<p class="header_center">
+Join our community of travelers and let's explore this amazing world full of wonders and discoveries together!
+</p>
+<p class="header_center">
+Go on an exciting journey with us - discover the world in all its splendor!
+</p>
+</div>
+<script>
+//The first time you open a site in a new browser tab or window, you will be redirected.
+(function() {
+    if (window.sessionStorage) {
+        if (!sessionStorage.getItem('redirected')) {
+            sessionStorage.setItem('redirected', 'true');
+            window.location.href = 'http://localhost/worldcountries/index.html';
+        }
+    }
+})();
+</script>
+    
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSearchModal()">&times;</span>
+        <div id="modalResults">
+        </div>
+    </div>
+</div>
+
+
+<div id="imageModal" class="modal-image">
+    <span class="close-image" onclick="closeModal()">&times;</span>
+    <img class="modal-content-image" id="img01">
+</div>
+
+<script src="js/BackgroundsIndex.js"></script>
+<script src="js/SearchIndex.js"></script>
+</body>
+</html>
